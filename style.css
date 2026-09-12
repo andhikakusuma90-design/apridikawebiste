@@ -939,3 +939,38 @@ body.theme-alt .side-menu {
     .profile-pic      { width: 140px; height: 140px; }
     .side-menu        { width: 480px; }
 }
+
+/* ============================================
+   PERFORMANCE OPTIMIZATIONS (MOBILE)
+   ============================================ */
+@media (max-width: 768px) {
+    /* Disable heavy continuous background animations */
+    .bg-animation { 
+        animation: none !important; 
+    }
+    
+    /* Disable box-shadow / filter animations which kill GPU */
+    .ring {
+        animation: none !important;
+        box-shadow: 0 0 14px rgba(180, 100, 110, 0.30) !important;
+    }
+    .glass-header h1 {
+        animation: none !important;
+        filter: drop-shadow(0 0 4px rgba(160,80,90,0.30)) !important;
+    }
+    .glass-header::before {
+        animation: none !important;
+        opacity: 0.8 !important;
+    }
+    
+    /* Smooth out the carousel */
+    .carousel-track {
+        animation-duration: 25s !important;
+    }
+    
+    /* Reduce expensive backdrop blurs */
+    .glass-header, .side-menu, .top-branding, .floating-controls {
+        backdrop-filter: blur(10px) !important;
+        -webkit-backdrop-filter: blur(10px) !important;
+    }
+}

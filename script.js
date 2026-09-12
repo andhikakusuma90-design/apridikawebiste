@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 /* ===== PARTICLES ===== */
 function createParticles() {
     const container = document.getElementById('particles-container');
-    const particleCount = 25;
+    const particleCount = window.innerWidth <= 768 ? 8 : 25;
 
     for (let i = 0; i < particleCount; i++) {
         let particle = document.createElement('div');
@@ -30,7 +30,7 @@ function createParticles() {
 /* ===== FLOATING HEARTS ===== */
 function createFloatingHearts() {
     const hearts = ['♥', '♡', '💕', '💖', '✨'];
-    const count  = 12;
+    const count  = window.innerWidth <= 768 ? 5 : 12;
 
     for (let i = 0; i < count; i++) {
         const heart = document.createElement('div');
