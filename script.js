@@ -29,7 +29,7 @@ function createParticles() {
 
 /* ===== FLOATING HEARTS ===== */
 function createFloatingHearts() {
-    const hearts = ['♥', '♡', '❤', '💕', '💖'];
+    const hearts = ['♥', '♡', '💕', '💖', '✨'];
     const count  = 12;
 
     for (let i = 0; i < count; i++) {
