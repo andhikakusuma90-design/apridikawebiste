@@ -261,27 +261,9 @@ body.theme-alt .bg-animation {
     animation: shimmer 4s ease-in-out infinite;
 }
 
-/* Corner decoration */
-.glass-header::after {
-    content: '♥';
-    position: absolute;
-    bottom: -30px;
-    right: -20px;
-    font-size: 10rem;
-    color: rgba(180, 100, 110, 0.06);
-    line-height: 1;
-    pointer-events: none;
-    animation: heartPulse 5s ease-in-out infinite;
-}
-
 @keyframes shimmer {
     0%, 100% { opacity: 0.5; transform: scaleX(0.7); }
     50%       { opacity: 1;   transform: scaleX(1); }
-}
-
-@keyframes heartPulse {
-    0%, 100% { transform: scale(1) rotate(-10deg); }
-    50%       { transform: scale(1.08) rotate(-10deg); }
 }
 
 @keyframes cardReveal {
@@ -843,7 +825,7 @@ body.theme-alt .side-menu {
     .floating-controls { padding: 7px 10px; gap: 4px; }
     .control-btn { width: 32px; height: 32px; font-size: 0.95rem; }
 
-    .container { padding: 5.5rem 0.8rem 2.5rem; }
+    .container { padding: 7rem 0.8rem 2.5rem; }
     .glass-header {
         padding: 2rem 1.2rem 1.8rem;
         border-radius: 22px;
@@ -857,6 +839,12 @@ body.theme-alt .side-menu {
     .shortcut-btn      { justify-content: center; padding: 0.6rem 1.2rem; }
 
     .side-menu { width: 100vw; }
+
+    .time-box { min-width: 45px; padding: 5px 8px; }
+    .time-box span { font-size: 0.95rem; }
+    .time-box small { font-size: 0.6rem; }
+    
+    .carousel-track img, .carousel-track video { height: 90px; }
 }
 
 /* ── Regular phones (361px – 480px) ── */
@@ -865,7 +853,7 @@ body.theme-alt .side-menu {
     .brand-name { font-size: 0.82rem; }
 
     .container {
-        padding: 5.5rem 1rem 2.5rem;
+        padding: 7rem 1rem 2.5rem;
     }
     .glass-header {
         padding: 2.2rem 1.4rem 2rem;
@@ -879,6 +867,12 @@ body.theme-alt .side-menu {
 
     .side-menu { width: 100vw; }
     .menu-grid { grid-template-columns: 1fr 1fr; }
+
+    .time-box { min-width: 50px; padding: 6px 10px; }
+    .time-box span { font-size: 1.05rem; }
+    .time-box small { font-size: 0.65rem; }
+
+    .carousel-track img, .carousel-track video { height: 110px; }
 }
 
 /* ── Large phones / small tablets (481px – 767px) ── */
