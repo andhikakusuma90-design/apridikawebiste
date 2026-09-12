@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprii Dikaa — Album</title>
+    <meta name="description" content="Dunia Kecil Milik Kita Berdua. Kenangan indah Aprii &amp; Dikaa.">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+    <div id="particles-container"></div>
+
+    <!-- Top-Left Branding -->
+    <div class="top-branding">
+        <div class="brand-icon"></div>
+        <div class="brand-text">
+            <span class="brand-name">Aprii Dikaa</span>
+            <span class="brand-sub">Photo &amp; Video Album</span>
+        </div>
+    </div>
+
+    <!-- Floating Controls -->
+    <div class="floating-controls">
+        <button id="theme-btn" class="control-btn" title="Ganti Tema">
+            <i class="fa-solid fa-sun"></i>
+        </button>
+        <button id="music-btn" class="control-btn" title="Putar Musik">
+            <i class="fa-solid fa-music"></i>
+        </button>
+        <button id="menu-btn" class="control-btn" title="Galeri">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bg-music" loop autoplay muted>
+        <source src="assets/background_music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Overlay gelap saat menu terbuka -->
+    <div id="menu-overlay" class="menu-overlay"></div>
+
+    <!-- ===== SIDE MENU ===== -->
+    <nav id="side-menu" class="side-menu">
+        <div class="side-menu-header">
+            <span class="side-menu-title">Gallery</span>
+            <button id="menu-close" class="close-btn" title="Tutup">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <!-- Tab Buttons -->
+        <div class="menu-tabs">
+            <button class="tab-btn active" data-tab="foto">
+                <i class="fa-solid fa-images"></i> Foto
+            </button>
+            <button class="tab-btn" data-tab="video">
+                <i class="fa-solid fa-film"></i> Video
+            </button>
+        </div>
+
+        <!-- Tab: Foto -->
+        <div class="tab-content active" id="tab-foto">
+            <p class="tab-desc">Kenangan kita dalam gambar</p>
+            <div class="menu-grid">
+                <div class="menu-grid-item">
+                    <img src="assets/apridika1.jpeg" alt="Resto">
+                    <span>Resto</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika2.jpeg" alt="Lalapan">
+                    <span>Lalapan</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika3.jpeg" alt="Bedugul">
+                    <span>Bedugul</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika4.jpeg" alt="Pesta Budaya">
+                    <span>Pesta Budaya SMP</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika5.jpeg" alt="Photo Booth">
+                    <span>Photo Booth</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika6.jpeg" alt="Kelulusan SMP">
+                    <span>Kelulusan SMP</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika7.jpeg" alt="Photo Booth">
+                    <span>Photo Booth 2</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika8.jpeg" alt="Konser">
+                    <span>Konser</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika9.jpeg" alt="Pasar Malam">
+                    <span>Pasar Malam</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika10.jpeg" alt="Bali Jhon Swing">
+                    <span>Bali Jhon Swing</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika11.jpeg" alt="Patung KumbaKarna">
+                    <span>Patung KumbaKarna</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika12.jpeg" alt="Ujian SMP">
+                    <span>Ujian SMP</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika13.jpeg" alt="Lazy Rivers">
+                    <span>Lazy Rivers</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika14.jpeg" alt="Pesta Seni Kemah">
+                    <span>Pentas Seni Kemah</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika15.jpeg" alt="First Date">
+                    <span>First Date</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika16.jpeg" alt="Hujan">
+                    <span>Hujan</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika17.jpeg" alt="Biang Lala">
+                    <span>Biang Lala</span>
+                </div>
+
+                <div class="menu-grid-item">
+                    <img src="assets/apridika18.jpeg" alt="Pantai">
+                    <span>Pantai</span>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Tab: Video -->
+        <div class="tab-content" id="tab-video">
+            <p class="tab-desc">Momen kita dalam video</p>
+            <div class="menu-video-list">
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 1</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio1.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 1</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio2.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 1</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio3.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 1</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio4.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 5</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio5.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 6</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio6.mp4" type="video/mp4">
+                    </video>
+                </div>
+
+                <div class="menu-video-item">
+                    <p class="video-label"><i class="fa-solid fa-clapperboard"></i> Video 7</p>
+                    <video controls loop>
+                        <source src="assets/apridikavidio7.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container">
+        <header class="glass-header">
+            <!-- Profile Photo -->
+            <div class="profile-images">
+                <div class="ring">
+                    <img src="assets/apridika.jpeg" alt="Aprii Dikaa" class="profile-pic">
+                </div>
+            </div>
+
+            <!-- Name -->
+            <h1>APRII DIKAA</h1>
+
+            <!-- Tagline -->
+            <p class="subtitle">Dunia Kecil Milik Kita Berdua.</p>
+
+            <!-- Date Badge -->
+            <p class="date">18 Oktober 2024</p>
+
+            <!-- Time Counter -->
+            <div id="time-counter" class="time-counter">
+                <div class="time-box"><span id="t-years">0</span><small>Tahun</small></div>
+                <div class="time-box"><span id="t-months">0</span><small>Bulan</small></div>
+                <div class="time-box"><span id="t-days">0</span><small>Hari</small></div>
+                <div class="time-box"><span id="t-hours">0</span><small>Jam</small></div>
+                <div class="time-box"><span id="t-minutes">0</span><small>Menit</small></div>
+                <div class="time-box"><span id="t-seconds">0</span><small>Detik</small></div>
+            </div>
+
+            <!-- Divider -->
+            <div class="card-divider"></div>
+
+            <!-- CTA Buttons -->
+            <div class="main-shortcuts">
+                <button class="shortcut-btn" id="open-foto-btn">
+                    <i class="fa-solid fa-images"></i> Lihat Foto
+                </button>
+                <button class="shortcut-btn" id="open-video-btn">
+                    <i class="fa-solid fa-film"></i> Lihat Video
+                </button>
+            </div>
+        </header>
+
+        <!-- Carousel -->
+        <div class="carousel-container">
+            <div class="carousel-track">
+                <img src="assets/apridika1.jpeg" alt="Kenangan">
+                <img src="assets/apridika2.jpeg" alt="Kenangan">
+                <video src="assets/apridikavidio1.mp4" autoplay muted loop playsinline></video>
+                <img src="assets/apridika3.jpeg" alt="Kenangan">
+                <img src="assets/apridika4.jpeg" alt="Kenangan">
+                <video src="assets/apridikavidio2.mp4" autoplay muted loop playsinline></video>
+                <img src="assets/apridika15.jpeg" alt="Kenangan">
+                <img src="assets/apridika18.jpeg" alt="Kenangan">
+                <!-- Duplicate for seamless loop -->
+                <img src="assets/apridika1.jpeg" alt="Kenangan">
+                <img src="assets/apridika2.jpeg" alt="Kenangan">
+                <video src="assets/apridikavidio1.mp4" autoplay muted loop playsinline></video>
+                <img src="assets/apridika3.jpeg" alt="Kenangan">
+                <img src="assets/apridika4.jpeg" alt="Kenangan">
+                <video src="assets/apridikavidio2.mp4" autoplay muted loop playsinline></video>
+                <img src="assets/apridika15.jpeg" alt="Kenangan">
+                <img src="assets/apridika18.jpeg" alt="Kenangan">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>@apridika2026</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
